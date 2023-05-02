@@ -3,5 +3,4 @@ stages:
 
 doall:
   stage: test
-  script: gcc -o hello hello.c && ./hello
-  
+  script: gcc -o hello ./src/hello.c && ./hello
