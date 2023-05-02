@@ -1,0 +1,7 @@
+stages:
+  - test
+
+doall:
+  stage: test
+  script: gcc -o hello hello.c && ./hello
+  
