@@ -1,6 +1,6 @@
 
-hello: hello.c
-	gcc -o hello hello.c
+hello: ./src/hello.c
+	gcc -o hello ./src/hello.c
 
 run: hello
 	./hello
