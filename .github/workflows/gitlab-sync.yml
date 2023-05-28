@@ -1,0 +1,23 @@
+# From https://dev.to/brunorobert/github-and-gitlab-sync-44mn
+name: GitLabSync
+
+on:
+  - push
+  - delete
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: GitLabSync
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - uses: wangchucheng/git-repo-sync@v0.1.0
+      with:
+        # Such as https://gitlab.com/michele.mesiti/cx-sync-target.git
+        target-url: ${{ secrets.GITLAB_REPO }}
+        # Such as michele.mesiti
+        target-username: ${{ secrets.GITLAB_USERNAME }}
+          # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS\_TOKEN }}
+        target-token: ${{ secrets.GITLAB_REPO_TOKEN }}
