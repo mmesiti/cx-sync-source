@@ -7,7 +7,7 @@ It is possible to push from the GitHub side, though.
 An example GitHub workflow is provided in `.github/workflow/gitlab-sync.yml`.
 
 In order for that to work, we need to:
-1. Create an access token on the GitLab repository (Settings->Access Tokens), with the `write_repository` scope. Select also the `Maintainer` (or `Owner`) role for the token. 
+1. Create an access token on the GitLab repository (Settings->Access Tokens), with the `write_repository` scope. Select also the `Maintainer` role for the token.
 2. Set the secrets correctly:
    - GITLAB_REPO: the url of the repository we want to push to
    - GITLAB_USERNAME: the username of the owner of that repository
