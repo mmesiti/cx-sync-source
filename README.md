@@ -19,6 +19,11 @@ In order for that to work, we need to:
    to allow force push from `Maintainer`s
 4. Trigger the workflow on GitHub either manually or by making a push
    on the right branch.
+5. This should cause the GitLab pipeline to run 
+   (on GitLab.com it might not run
+   unless you have a runner assigned to your project,
+   shared runners do not work).
+   
 
 
 
